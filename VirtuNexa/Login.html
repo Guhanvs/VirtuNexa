@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, black, white);
+  color: #333;
+}
+
+.login {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+}
+
+.login h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #0984e3;
+}
+
+.login label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0984e3;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login button:hover {
+  background: #74b9ff;
+}
+
+.new-user {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.new-user a {
+  color: #0984e3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.new-user a:hover {
+  text-decoration: underline;
+}
+    </style>
+    <script>
+        function openWin() {
+  window.open("./Home.html");
+}
+    </script>
+</head>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <form>
+          <label for="username">User Name:</label>
+          <input type="text" id="username" name="username"><br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password"><br>
+          <button type="submit" onclick="openWin()">Login</button>
+        </form>
+        <div class="new-user">
+          <span>New User?</span>
+          <a href="Register.html">Register</a>
+        </div>
+      </div>
+    
+</body>
+</html>

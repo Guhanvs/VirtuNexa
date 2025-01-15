@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stationeries</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: whitesmoke;
+      color: blueviolet;
+    }
+
+    .navbar .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar li {
+      font-size: 1.1em;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, black, #d4edda);
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .product-item {
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-item img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .product-item h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .product-item p {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    .product-item button {
+      padding: 10px 20px;
+      background-color: #0275d8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .product-item button:hover {
+      background-color: #025aa5;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Stationery Hub</div>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to Stationery Hub</h1>
+      <p>Your one-stop destination for premium stationery.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="./NoteBooks.jpeg" alt="Notebook">
+        <h3>Notebook</h3>
+        <p>₹200.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="./Pens.jpeg" alt="Pen Set">
+        <h3>Pen Set</h3>
+        <p>₹150.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="./Art.jpeg" alt="Art Supplies">
+        <h3>Art Supplies</h3>
+        <p>₹350.00</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-item">
+        <img src="./Organizer.jpeg" alt="Organizer">
+        <h3>Organizer</h3>
+        <p>₹250.00</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  
+</body>
+</html>

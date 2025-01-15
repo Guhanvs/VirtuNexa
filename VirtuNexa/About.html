@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.about-header {
+  height: 50vh;
+  background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-header .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2em;
+}
+
+/* About Content */
+.about-content {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.about-section img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-section .text {
+  max-width: 500px;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #6c5ce7;
+}
+
+.about-section p, .about-section ul {
+  font-size: 1em;
+  color: #555;
+}
+
+.about-section ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Footer Section */
+.about-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.about-footer a {
+  color: #f4f4f4;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.about-footer a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <header class="about-header">
+    <div class="overlay">
+      <h1>About Us</h1>
+      <p>Discover our story, mission, and Vision</p>
+    </div>
+  </header>
+  
+  <section class="about-content">
+    <div class="about-section">
+      <img src="./Story.png" alt="Our Story">
+      <div class="text">
+        <h2>Our Story</h2>
+        <p>
+          Founded in 2025, our mission has been to make online shopping seamless, reliable, and enjoyable. From a small team with a big dream, we’ve grown into a platform trusted by millions.
+        </p>
+      </div>
+    </div>
+    <div class="about-section reverse">
+      <div class="text">
+        <h2>Our Mission</h2>
+        <p>
+          We aim to connect customers with top-quality products while providing exceptional customer service. Sustainability and community are at the heart of everything we do.
+        </p>
+      </div>
+      <img src="./Mission.jpeg" alt="Our Mission">
+    </div>
+    <div class="about-section">
+      <img src="./Vision.jpeg" alt="Our Vision">
+      <div class="text">
+        <h2>Our Vision</h2>
+        <ul>
+          <li>Customer-Centricity: You are our priority.</li>
+          <li>Innovation: Pushing the boundaries of online shopping.</li>
+          <li>Sustainability: Committed to eco-friendly practices.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="about-footer">
+    <p>&copy; 2025 eShop. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">Instagram</a>, 
+      <a href="#">Facebook</a>, 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+</body>
+</html>

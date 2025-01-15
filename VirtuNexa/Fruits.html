@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Fruits</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffbe6;
+    }
+    .header {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .product-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .product-item h3 {
+      margin: 15px 0 10px;
+      color: #333;
+    }
+    .product-item p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Fresh Fruits</h1>
+    <p>Nature's sweetness delivered to your doorstep</p>
+  </header>
+  <main>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="./Apple.jpeg" alt="Apples">
+        <h3>Apples</h3>
+        <p>₹200 / Kg</p>
+      </div>
+      <div class="product-item">
+        <img src="./banana.jpeg" alt="Bananas">
+        <h3>Bananas</h3>
+        <p>₹100/ Kg</p>
+      </div>
+      <div class="product-item">
+        <img src="./oranges.jpeg" alt="Oranges">
+        <h3>Oranges</h3>
+        <p>₹220 / Kg</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

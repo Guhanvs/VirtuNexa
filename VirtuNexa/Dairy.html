@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dairy Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #ffcc80;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .product-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .product-item h3 {
+      margin: 15px 0 10px;
+      color: #333;
+    }
+    .product-item p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Dairy Products</h1>
+    <p>Fresh and high-quality dairy for your family</p>
+  </header>
+  <main>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="./Milk.jpeg" alt="Milk">
+        <h3>Fresh Milk</h3>
+        <p>₹50.00 / Liter</p>
+      </div>
+      <div class="product-item">
+        <img src="./Cheese.jpeg" alt="Cheese">
+        <h3>Cheddar Cheese</h3>
+        <p>₹100.00 / 250g</p>
+      </div>
+      <div class="product-item">
+        <img src="./Yogurt.jpeg" alt="Yogurt">
+        <h3>Greek Yogurt</h3>
+        <p>₹150.00 / Cup</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

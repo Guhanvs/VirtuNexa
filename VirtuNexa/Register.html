@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #333;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #6c5ce7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1em;
+}
+
+form input::placeholder {
+  color: #999;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #6c5ce7;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #a29bfe;
+}
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register</h1>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">
+          
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+          
+          <label for="mobile">Mobile Number:</label>
+          <input type="number" id="mobile" name="mobile" placeholder="Enter your mobile number">
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    
+</body>
+</html>
