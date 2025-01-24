@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+        .product p {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+        }
+        .product button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        #go-to-cart-btn {
+            display: block;
+            margin: 150px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #go-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav style="text-align: center; background-color: black; padding: 10px;">
+        <span style="color: white; font-size: 24px; font-weight: bold;">Product Gallery</span>
+    </nav>
+    <section id="gallery">
+        <div class="product">
+            <img src="./Pen1.jpeg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>₹10.00</p>
+            <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="./Pen2.jpeg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>₹15.00</p>
+            <button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="./Pen4.jpeg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>₹20.00</p>
+            <button onclick="addToCart('Product 3', 20.00)">Add to Cart</button>
+        </div>
+    </section>
+
+    <button id="go-to-cart-btn" onclick="window.location.href='cart.html'">Go to Cart</button>
+
+    <script>
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+</body>
+</html>
