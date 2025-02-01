@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Address Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .container {
+            padding: 60px 20px;
+        }
+        select, input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+    </nav>
+    
+    <div class="container" id="section1">
+        <h2>Dynamic Address Form</h2>
+        <form>
+            <label for="country">Country:</label>
+            <select id="country">
+                <option value="">Select Country</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="AntiguaAndBarbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+            </select>
+            
+            <label for="state">State:</label>
+            <select id="state">
+                <option value="">Select State</option>
+            </select>
+            
+            <label for="city">City:</label>
+            <select id="city">
+                <option value="">Select City</option>
+            </select>
+        </form>
+    </div>
+    
+    <div class="container" id="section2">
+        <h2>Other Section</h2>
+        <p>Additional content goes here.</p>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const countrySelect = document.getElementById("country");
+            const stateSelect = document.getElementById("state");
+            const citySelect = document.getElementById("city");
+
+            const states = {
+                USA: ["California", "Texas", "New York"],
+                India: ["Maharashtra", "Karnataka", "Delhi"],
+                Afghanistan: ["Kabul", "Herat", "Kandahar"],
+                Albania: ["Tirana", "Durrës", "Shkodër"],
+                Algeria: ["Algiers", "Oran", "Constantine"],
+                Andorra: ["Andorra la Vella", "Escaldes-Engordany", "Encamp"],
+                Angola: ["Luanda", "Benguela", "Huambo"],
+                AntiguaAndBarbuda: ["Saint John", "Saint Mary", "Saint Philip"],
+                Argentina: ["Buenos Aires", "Córdoba", "Santa Fe"],
+                Australia: ["New South Wales", "Victoria", "Queensland"]
+            };
+
+            const cities = {
+                California: ["Los Angeles", "San Francisco", "San Diego"],
+                Texas: ["Houston", "Austin", "Dallas"],
+                NewYork: ["New York City", "Buffalo", "Rochester"],
+                Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+                Karnataka: ["Bangalore", "Mysore", "Mangalore"],
+                Delhi: ["New Delhi", "Dwarka", "Karol Bagh"],
+                Kabul: ["Kabul", "Paghman", "Charikar"],
+                Herat: ["Herat", "Shindand", "Guzara"],
+                Kandahar: ["Kandahar", "Spin Boldak", "Shah Wali Kot"],
+                Tirana: ["Tirana", "Kamëz", "Vorë"],
+                Durrës: ["Durrës", "Shijak", "Krujë"],
+                Shkodër: ["Shkodër", "Koplik", "Pukë"],
+                Algiers: ["Algiers", "Bab Ezzouar", "Bir Mourad Raïs"],
+                Oran: ["Oran", "Es Sénia", "Bir El Djir"],
+                Constantine: ["Constantine", "El Khroub", "Aïn Smara"],
+                AndorraLaVella: ["Andorra la Vella", "Santa Coloma", "La Margineda"],
+                EscaldesEngordany: ["Escaldes-Engordany", "Engordany", "Vallnord"],
+                Encamp: ["Encamp", "Pas de la Casa", "Les Bons"],
+                Luanda: ["Luanda", "Viana", "Cacuaco"],
+                Benguela: ["Benguela", "Lobito", "Baía Farta"],
+                Huambo: ["Huambo", "Caála", "Bailundo"],
+                SaintJohn: ["Saint John's", "Potters Village", "Clare Hall"],
+                SaintMary: ["Bolans", "Crab Hill", "Johnsons Point"],
+                SaintPhilip: ["Willikies", "Newfield", "Seatons"],
+                BuenosAires: ["Buenos Aires", "La Plata", "Mar del Plata"],
+                Córdoba: ["Córdoba", "Villa Carlos Paz", "Río Cuarto"],
+                SantaFe: ["Rosario", "Santa Fe", "Rafaela"],
+                NewSouthWales: ["Sydney", "Newcastle", "Wollongong"],
+                Victoria: ["Melbourne", "Geelong", "Ballarat"],
+                Queensland: ["Brisbane", "Gold Coast", "Cairns"]
+            };
+
+            // Handle country selection
+            countrySelect.addEventListener("change", function() {
+                stateSelect.innerHTML = '<option value="">Select State</option>';
+                citySelect.innerHTML = '<option value="">Select City</option>';
+                const selectedCountry = countrySelect.value;
+                if (selectedCountry && states[selectedCountry]) {
+                    states[selectedCountry].forEach(state => {
+                        let option = new Option(state, state);
+                        stateSelect.add(option);
+                    });
+                }
+            });
+
+            // Handle state selection
+            stateSelect.addEventListener("change", function() {
+                citySelect.innerHTML = '<option value="">Select City</option>';
+                const selectedState = stateSelect.value.replace(/\s+/g, "").replace(/&/g, "And"); // Handle spaces and special characters
+                if (selectedState && cities[selectedState]) {
+                    cities[selectedState].forEach(city => {
+                        let option = new Option(city, city);
+                        citySelect.add(option);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
