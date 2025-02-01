@@ -123,7 +123,6 @@
                 Queensland: ["Brisbane", "Gold Coast", "Cairns"]
             };
 
-            // Handle country selection
             countrySelect.addEventListener("change", function() {
                 stateSelect.innerHTML = '<option value="">Select State</option>';
                 citySelect.innerHTML = '<option value="">Select City</option>';
@@ -136,7 +135,6 @@
                 }
             });
 
-            // Handle state selection
             stateSelect.addEventListener("change", function() {
                 citySelect.innerHTML = '<option value="">Select City</option>';
                 const selectedState = stateSelect.value.replace(/\s+/g, "").replace(/&/g, "And"); // Handle spaces and special characters
