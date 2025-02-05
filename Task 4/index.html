@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav {
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin-top: 20px;
+        }
+        .form-field {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-field input {
+            flex: 1;
+            padding: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./form-Section.html" style="color: white; text-decoration: none;">About Form Builder</a>
+    </nav>
+
+    <section id="form-section" class="container">
+        <h2>Dynamic Form Builder</h2>
+        <div id="form-container"></div>
+        <button onclick="addField()">Add Field</button>
+        <button onclick="generateForm()">Generate Form</button>
+        <h3>Generated Form Preview:</h3>
+        <div id="preview"></div>
+    </section>
+
+    <script>
+        function addField() {
+            let formContainer = document.getElementById('form-container');
+            let div = document.createElement('div');
+            div.classList.add('form-field');
+            div.innerHTML = `<input type="text" placeholder="Enter value"> <button onclick="removeField(this)">X</button>`;
+            formContainer.appendChild(div);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+
+        function generateForm() {
+            let fields = document.querySelectorAll('#form-container input');
+            let preview = document.getElementById('preview');
+            preview.innerHTML = '';
+            fields.forEach(field => {
+                let p = document.createElement('p');
+                p.textContent = field.value;
+                preview.appendChild(p);
+            });
+        }
+    </script>
+</body>
+</html>
